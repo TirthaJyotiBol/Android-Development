@@ -1,4 +1,4 @@
-package com.example.unitconvertor;
+package com.example.happybirthday;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,33 +10,35 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    Button button;
+    EditText editText;
+    TextView textView;
+    TextView tv2;
 
-    private Button button;
-    private TextView textView;
-    private EditText editText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
+        * get the id of all the elements
+        * */
+        textView = textView.findViewById(R.id.textView1);
+       editText = editText.findViewById(R.id.editTextTextPersonName);
+       button = button.findViewById(R.id.button2);
+       tv2= textView.findViewById(R.id.textView3);
 
-        button = findViewById(R.id.button);                 // the id having button is taken here
-        textView  = findViewById(R.id.textView2);           // where we will get the output
-        editText =findViewById(R.id.editTextTextPersonName2); // input would be given in here
+       button.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Toast.makeText(MainActivity.this, "Wishing You A warming Happy Birthday", Toast.LENGTH_SHORT).show();
+               String message = editText.toString();  //convert the text value into string
+               tv2.setText("Happy Birthday "+message);
+           }
+       });
 
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String s = editText.getText().toString();                //took the edit text value into  string
-               int kg_value = Integer.parseInt(s);                      // convert the string value into integer
-
-                double pound_value = kg_value*2.205;
-                textView.setText("The corresponding value for pound is "+pound_value);
-
-            }
-        });
 
 
     }
+
 }
