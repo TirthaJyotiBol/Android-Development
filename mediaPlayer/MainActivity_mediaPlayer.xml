@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E2F4F4F4"
     tools:context=".MainActivity">
 
     <TextView
@@ -56,16 +57,40 @@
         android:rotationY="-29"
         app:srcCompat="@drawable/music" />
 
+
+    <SeekBar
+        android:id="@+id/seekVol"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="330dp"
+        />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:paddingLeft="90dp"
-        android:paddingTop="7dp"
-        android:text="status" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="295dp"
+        android:layout_marginLeft="110dp"
+        android:text="Adjust Volume" />
 
+    <TextView
+        android:id="@+id/musicView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music seekBar"
+        android:layout_marginTop="360dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="110dp"
+        />
+
+    <SeekBar
+        android:id="@+id/seekProg"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="400dp"
+        />
 
 </RelativeLayout>
