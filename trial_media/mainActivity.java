@@ -2,20 +2,24 @@ package com.example.paradox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
+
     MediaPlayer mediaPlayer;
     AudioManager audioManager;
     SeekBar seekBar;
     SeekBar seekVol;
+
 
 
     public void play(View view){
@@ -86,8 +90,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
+    public  void  move(View view){
+        Intent intent = new Intent(this,bugQuery.class);
+        startActivity(intent);
+
+    }
 
 }
